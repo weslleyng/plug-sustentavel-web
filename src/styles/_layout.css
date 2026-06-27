@@ -1,0 +1,92 @@
+/*
+  _layout.css — Container, grid e ritmo vertical
+  Terroso secao 5: espacamento, grid, border-radius semantico
+*/
+
+/* ------------------------------------------------------------------ */
+/* Container principal                                                  */
+/* ------------------------------------------------------------------ */
+.wrap {
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 0 48px;
+}
+
+@media (max-width: 720px) {
+  .wrap {
+    padding: 0 22px;
+  }
+}
+
+/* ------------------------------------------------------------------ */
+/* Ritmo vertical de secao (Terroso 5.2: 120px desktop / 80px mobile)  */
+/* ------------------------------------------------------------------ */
+.breathe {
+  padding: 160px 0;
+}
+
+@media (max-width: 820px) {
+  .breathe {
+    padding: 96px 0;
+  }
+}
+
+/* Ritmo reduzido para secoes internas */
+.breathe-sm {
+  padding: 100px 0;
+}
+
+@media (max-width: 820px) {
+  .breathe-sm {
+    padding: 64px 0;
+  }
+}
+
+/* ------------------------------------------------------------------ */
+/* Grid assimetrico de 12 colunas                                       */
+/* ------------------------------------------------------------------ */
+.grid12 {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 32px;
+}
+
+@media (max-width: 900px) {
+  .grid12 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ------------------------------------------------------------------ */
+/* Secao-head com split de 2 colunas (kicker+titulo / supporting text) */
+/* ------------------------------------------------------------------ */
+.section-head-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: end;
+  gap: 40px;
+  margin-bottom: 80px;
+}
+
+@media (max-width: 820px) {
+  .section-head-split {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin-bottom: 48px;
+  }
+}
+
+.section-head-split .kicker {
+  margin-bottom: 20px;
+}
+
+.section-head-split .supporting {
+  max-width: 440px;
+  justify-self: end;
+}
+
+@media (max-width: 820px) {
+  .section-head-split .supporting {
+    justify-self: start;
+  }
+}

@@ -1,0 +1,153 @@
+:host {
+  display: contents;
+}
+
+/* Capsula de alta intensidade — CTA Final (Terroso 6.6) */
+.closing {
+  background: linear-gradient(165deg, var(--ink) 0%, var(--ink-deep) 55%, #0f1a0f 100%);
+  color: var(--cream-bright);
+  position: relative;
+  overflow: hidden;
+  padding: 180px 0 200px;
+}
+
+.closing::before {
+  content: '';
+  position: absolute;
+  left: -20%;
+  top: -20%;
+  width: 140%;
+  height: 140%;
+  background-image:
+    radial-gradient(
+      ellipse at 30% 70%,
+      color-mix(in oklab, var(--leaf) 32%, transparent),
+      transparent 55%
+    ),
+    radial-gradient(
+      ellipse at 80% 20%,
+      color-mix(in oklab, var(--leaf-deep) 28%, transparent),
+      transparent 50%
+    );
+  pointer-events: none;
+}
+
+.closing::after {
+  content: '';
+  position: absolute;
+  right: -200px;
+  bottom: -120px;
+  width: 640px;
+  height: 640px;
+  background-image: url('/simbolo-creme.webp');
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.12;
+  transform: rotate(-8deg);
+  pointer-events: none;
+}
+
+.closing .wrap {
+  position: relative;
+  z-index: 2;
+}
+
+.closing .kicker {
+  color: var(--leaf);
+}
+
+.closing-display {
+  font-family: var(--f-display);
+  font-weight: 300;
+  font-size: clamp(48px, 7vw, 112px);
+  line-height: 0.9;
+  letter-spacing: -0.03em;
+  color: var(--cream-bright);
+  margin: 32px 0 40px;
+  max-width: 920px;
+  text-wrap: balance;
+}
+
+.closing-display em {
+  font-style: italic;
+  color: var(--leaf);
+  font-weight: 300;
+}
+
+.closing p {
+  font-family: var(--f-display);
+  font-weight: 300;
+  font-style: italic;
+  font-size: 22px;
+  line-height: 1.4;
+  color: color-mix(in oklab, var(--cream-bright) 72%, transparent);
+  max-width: 560px;
+  margin: 0 0 48px;
+}
+
+/* CTA do closing usa variante clara (leaf sobre ink — inversao da regra base) */
+.closing .btn-primary {
+  background: var(--leaf);
+  color: var(--ink-deep);
+  font-size: 17px;
+  padding: 22px 32px;
+  border-radius: var(--r-pill);
+}
+
+.closing .btn-primary:hover {
+  background: var(--cream-bright);
+  color: var(--ink-deep);
+}
+
+.closing .btn-primary .arrow {
+  background: color-mix(in oklab, var(--ink-deep) 18%, transparent);
+}
+
+.closing .meta {
+  margin-top: 40px;
+  font-size: 12.5px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: color-mix(in oklab, var(--cream-bright) 50%, transparent);
+}
+
+/* Box flutuante lateral — contexto adicional */
+.closing-side {
+  position: absolute;
+  right: 48px;
+  top: 180px;
+  max-width: 280px;
+  background: color-mix(in oklab, var(--cream-bright) 10%, transparent);
+  backdrop-filter: blur(16px);
+  border-radius: var(--r-lg);
+  padding: 28px;
+  z-index: 3;
+}
+
+@media (max-width: 1100px) {
+  .closing-side {
+    display: none;
+  }
+}
+
+.closing-side .lbl {
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: color-mix(in oklab, var(--cream-bright) 60%, transparent);
+}
+
+.closing-side .val {
+  font-family: var(--f-display);
+  font-weight: 300;
+  font-size: 36px;
+  color: var(--cream-bright);
+  margin: 8px 0 0;
+  line-height: 1;
+}
+
+.closing-side .line {
+  height: 1.5px;
+  background: color-mix(in oklab, var(--cream-bright) 20%, transparent);
+  margin: 20px 0;
+}

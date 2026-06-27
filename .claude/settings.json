@@ -1,0 +1,44 @@
+{
+  "permissions": {
+    "allow": [
+      "Edit",
+      "Write",
+      "Bash(npm run *)",
+      "Bash(ng *)",
+      "Bash(npx prettier *)",
+      "Bash(npx ng *)",
+      "Bash(grep *)"
+    ],
+    "deny": [
+      "Bash(rm -rf *)",
+      "Edit(dist/*)",
+      "Edit(.angular/*)",
+      "Edit(node_modules/*)",
+      "Edit(package-lock.json)"
+    ]
+  },
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "npx prettier --write \"${file}\" 2>/dev/null || true"
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "if echo \"${file}\" | grep -qE \"public/(logo|badge|simbolo)\"; then echo 'BLOQUEADO: Assets institucionais em public/ nao devem ser editados. Substituir somente via arquivos oficiais aprovados pelo cliente.'; exit 1; fi"
+          }
+        ]
+      }
+    ]
+  }
+}

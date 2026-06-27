@@ -1,0 +1,183 @@
+<section
+  class="projetos breathe"
+  id="projetos"
+  data-screen-label="Projetos"
+  aria-labelledby="projetos-headline"
+>
+  <div class="wrap">
+    <div class="section-head-split">
+      <div>
+        <div class="kicker">Projetos</div>
+        <h2 id="projetos-headline" class="headline-xl" style="margin-top: 28px">
+          Obras entregues,<br />resultados <em>medidos</em>.
+        </h2>
+      </div>
+      <p class="body-lg supporting">
+        De residências a usinas de grande porte e ao poder público — projetos reais, com economia e
+        payback comprovados.
+      </p>
+    </div>
+
+    <div
+      class="carousel"
+      role="region"
+      aria-roledescription="carrossel"
+      aria-label="Projetos entregues pela Plug"
+    >
+      <div
+        #viewport
+        class="viewport"
+        (mouseenter)="stop()"
+        (mouseleave)="start()"
+        (focusin)="stop()"
+        (focusout)="start()"
+        (pointerdown)="onPointerDown($event)"
+        (pointerup)="onPointerUp($event)"
+        (pointerleave)="onPointerUp($event)"
+      >
+        <div
+          #track
+          class="track"
+          [style.transform]="'translateX(' + offset() + 'px)'"
+          [style.transition]="animate() ? 'transform .6s cubic-bezier(.4, 0, .2, 1)' : 'none'"
+          (transitionend)="onTransitionEnd()"
+        >
+          @for (slide of slides; track $index) {
+            <article
+              class="slide"
+              role="group"
+              aria-roledescription="slide"
+              [attr.aria-label]="$index + ' de ' + projects.length"
+              [attr.inert]="isClone($index) ? '' : null"
+            >
+              <div class="p-card">
+                <div class="p-media">
+                  <img
+                    [src]="slide.images[currentImage(slide)].src"
+                    [alt]="slide.images[currentImage(slide)].alt"
+                    width="1280"
+                    height="720"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+
+                @if (slide.images.length > 1) {
+                  <div class="p-thumbs" role="group" aria-label="Galeria do projeto">
+                    @for (img of slide.images; track $index) {
+                      <button
+                        type="button"
+                        class="p-thumb"
+                        [class.is-active]="currentImage(slide) === $index"
+                        [attr.aria-pressed]="currentImage(slide) === $index"
+                        [attr.aria-label]="'Ver foto ' + ($index + 1)"
+                        (click)="pickImage(slide.id, $index)"
+                      >
+                        <img
+                          [src]="img.thumb"
+                          alt=""
+                          width="240"
+                          height="135"
+                          loading="lazy"
+                          decoding="async"
+                        />
+                      </button>
+                    }
+                  </div>
+                }
+
+                <div class="p-body">
+                  <div class="p-tag">{{ slide.tag }}</div>
+                  <h3 class="p-title">{{ slide.title }}</h3>
+                  <p class="p-desc">{{ slide.description }}</p>
+                  <dl class="p-metrics">
+                    @for (m of slide.metrics; track m.label) {
+                      <div class="p-metric">
+                        <dt class="p-metric-v">{{ m.value }}</dt>
+                        <dd class="p-metric-l">{{ m.label }}</dd>
+                      </div>
+                    }
+                  </dl>
+                </div>
+              </div>
+            </article>
+          }
+        </div>
+      </div>
+
+      <div class="p-controls">
+        <button type="button" class="p-arrow" aria-label="Projeto anterior" (click)="prev()">
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <polyline points="15 18 9 12 15 6" />
+          </svg>
+        </button>
+
+        <div class="p-dots" role="group" aria-label="Selecionar projeto">
+          @for (p of projects; track p.id) {
+            <button
+              type="button"
+              class="p-dot"
+              [class.is-active]="activeDot() === $index"
+              [attr.aria-current]="activeDot() === $index ? 'true' : null"
+              [attr.aria-label]="p.title"
+              (click)="goTo($index)"
+            ></button>
+          }
+        </div>
+
+        <button type="button" class="p-arrow" aria-label="Próximo projeto" (click)="next()">
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <polyline points="9 18 15 12 9 6" />
+          </svg>
+        </button>
+      </div>
+
+      <div class="p-cta">
+        <a class="btn-primary" [href]="wa.url" target="_blank" rel="noopener" data-wa>
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path
+              d="M17.5 14.4c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7 0-.3-.2-1.3-.5-2.5-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.4.5-.6.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.1-.7-1.6-.9-2.2-.2-.5-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4s-1 1-1 2.4 1 2.8 1.2 3c.1.2 2 3 4.8 4.2.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.5A10 10 0 1 0 12 2z"
+            />
+          </svg>
+          Quero um projeto assim
+          <span class="arrow" aria-hidden="true">
+            <svg
+              width="14"
+              height="14"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <line x1="5" y1="12" x2="19" y2="12" />
+              <polyline points="12 5 19 12 12 19" />
+            </svg>
+          </span>
+        </a>
+        <span class="p-cta-note meta">Atendimento humano, técnico, no WhatsApp.</span>
+      </div>
+    </div>
+  </div>
+</section>

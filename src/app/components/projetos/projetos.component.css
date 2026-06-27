@@ -1,0 +1,266 @@
+:host {
+  display: contents;
+}
+
+.projetos {
+  background: var(--cream-bright);
+  position: relative;
+  overflow: hidden;
+}
+
+.projetos::before {
+  content: '';
+  position: absolute;
+  left: -180px;
+  bottom: -160px;
+  width: 560px;
+  height: 560px;
+  background: url('/simbolo-verde.webp') no-repeat center / contain;
+  opacity: 0.04;
+  pointer-events: none;
+}
+
+/* Carousel ----------------------------------------------------------- */
+.viewport {
+  overflow: hidden;
+  cursor: grab;
+  touch-action: pan-y;
+}
+
+.track {
+  display: flex;
+  gap: clamp(20px, 2.4vw, 36px);
+  will-change: transform;
+}
+
+.slide {
+  flex: 0 0 64%;
+  min-width: 0;
+}
+
+@media (max-width: 900px) {
+  .slide {
+    flex-basis: 80%;
+  }
+}
+
+@media (max-width: 600px) {
+  .slide {
+    flex-basis: 86%;
+  }
+}
+
+/* Card --------------------------------------------------------------- */
+.p-card {
+  height: 100%;
+  background: var(--paper);
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  box-shadow:
+    var(--shadow-ambient),
+    inset 0 0 0 1px rgba(52, 66, 51, 0.06);
+}
+
+.p-media {
+  aspect-ratio: 16 / 9;
+  background: var(--cream-deep);
+}
+
+.p-media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.p-thumbs {
+  display: flex;
+  gap: 8px;
+  padding: 12px 12px 0;
+}
+
+.p-thumb {
+  flex: 0 0 auto;
+  width: 64px;
+  aspect-ratio: 16 / 9;
+  padding: 0;
+  border: 1.5px solid transparent;
+  border-radius: var(--r-md);
+  overflow: hidden;
+  background: none;
+  cursor: pointer;
+  opacity: 0.55;
+  transition:
+    opacity var(--t-fast),
+    border-color var(--t-fast);
+}
+
+.p-thumb img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.p-thumb:hover {
+  opacity: 0.85;
+}
+
+.p-thumb.is-active {
+  opacity: 1;
+  border-color: var(--leaf-deep);
+}
+
+.p-body {
+  padding: clamp(22px, 2.4vw, 34px);
+}
+
+.p-tag {
+  font-family: var(--f-body);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+.p-title {
+  margin: 12px 0 10px;
+  font-family: var(--f-headline);
+  font-weight: 600;
+  font-size: clamp(22px, 2.6vw, 28px);
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  color: var(--ink-deep);
+}
+
+.p-desc {
+  margin: 0;
+  max-width: 60ch;
+  font-size: 15px;
+  line-height: 1.55;
+  color: var(--ink-soft);
+}
+
+.p-metrics {
+  margin: 24px 0 0;
+  padding-top: 22px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 18px 24px;
+  border-top: 1px solid var(--line);
+}
+
+.p-metric {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.p-metric-v {
+  font-family: var(--f-display);
+  font-weight: 400;
+  font-size: clamp(22px, 2.4vw, 28px);
+  letter-spacing: -0.01em;
+  color: var(--ink-deep);
+  white-space: nowrap;
+}
+
+.p-metric-l {
+  margin: 0;
+  font-family: var(--f-body);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+/* Controls ----------------------------------------------------------- */
+.p-controls {
+  margin-top: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.p-arrow {
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border-radius: var(--r-pill);
+  border: 1px solid var(--line);
+  background: var(--cream-bright);
+  color: var(--ink-deep);
+  cursor: pointer;
+  transition:
+    background var(--t-fast),
+    border-color var(--t-fast),
+    color var(--t-fast);
+}
+
+.p-arrow:hover {
+  background: var(--leaf-deep);
+  border-color: var(--leaf-deep);
+  color: var(--cream-bright);
+}
+
+.p-dots {
+  display: flex;
+  gap: 4px;
+}
+
+.p-dot {
+  width: 28px;
+  height: 24px;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.p-dot::before {
+  content: '';
+  width: 9px;
+  height: 9px;
+  border-radius: var(--r-pill);
+  background: var(--cream-deeper);
+  transition:
+    width var(--t-fast),
+    background var(--t-fast);
+}
+
+.p-dot.is-active::before {
+  width: 24px;
+  background: var(--leaf-deep);
+}
+
+/* CTA ---------------------------------------------------------------- */
+.p-cta {
+  margin-top: clamp(40px, 5vw, 64px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.p-cta-note {
+  color: var(--ink-mute);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .track {
+    transition: none !important;
+  }
+
+  .p-thumb,
+  .p-arrow,
+  .p-dot::before {
+    transition: none;
+  }
+}

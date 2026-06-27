@@ -1,0 +1,16 @@
+/*
+  styles.css — Ponto de entrada do sistema de estilos
+  Plug Soluções Sustentáveis — Angular 21
+
+  Importa apenas os parciais. Regras concretas ficam nos parciais
+  ou nos .component.css de cada componente.
+
+  Ordem importa: tokens > base > tipografia > layout > botoes > utilitarios
+*/
+
+@import './styles/_tokens.css';
+@import './styles/_base.css';
+@import './styles/_typography.css';
+@import './styles/_layout.css';
+@import './styles/_buttons.css';
+@import './styles/_utilities.css';

@@ -1,0 +1,83 @@
+:host {
+  display: contents;
+}
+
+nav.top {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 60;
+  background: color-mix(in oklab, var(--cream-bright) 70%, transparent);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+nav.top .inner {
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 0 48px;
+  height: 84px;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 40px;
+}
+
+@media (max-width: 720px) {
+  nav.top .inner {
+    padding: 0 22px;
+    height: 72px;
+    gap: 16px;
+  }
+}
+
+nav .brand img {
+  height: 36px;
+  width: auto;
+}
+
+nav .links {
+  display: flex;
+  gap: 36px;
+  justify-content: center;
+  font-size: 14px;
+  color: var(--ink-soft);
+}
+
+nav .links a {
+  position: relative;
+  transition: color var(--t-fast);
+}
+
+nav .links a:hover {
+  color: var(--leaf-deep);
+}
+
+nav .cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--ink-deep);
+  color: var(--cream-bright);
+  padding: 12px 22px;
+  border-radius: var(--r-pill);
+  font-weight: 500;
+  font-size: 14px;
+  transition: background var(--t-base);
+}
+
+nav .cta:hover {
+  background: var(--leaf-deep);
+}
+
+nav .cta svg {
+  width: 16px;
+  height: 16px;
+}
+
+@media (max-width: 860px) {
+  nav .links {
+    display: none;
+  }
+}

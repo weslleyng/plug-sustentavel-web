@@ -1,0 +1,111 @@
+:host {
+  display: contents;
+}
+
+.manifesto {
+  background: var(--cream-soft);
+  position: relative;
+  overflow: hidden;
+}
+
+.manifesto::before {
+  content: '';
+  position: absolute;
+  right: -160px;
+  top: 50%;
+  transform: translateY(-50%) rotate(8deg);
+  width: 720px;
+  height: 720px;
+  background-image: url('/simbolo-verde.webp');
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.04;
+  pointer-events: none;
+}
+
+.manifesto-grid {
+  display: grid;
+  grid-template-columns: 5fr 7fr;
+  gap: 80px;
+  align-items: start;
+  position: relative;
+  z-index: 2;
+}
+
+@media (max-width: 900px) {
+  .manifesto-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+.manifesto-grid aside .kicker {
+  margin-bottom: 32px;
+}
+
+.manifesto-grid aside p {
+  font-family: var(--f-body);
+  font-size: 15px;
+  color: var(--ink-soft);
+  max-width: 360px;
+  line-height: 1.6;
+  margin: 24px 0 0;
+}
+
+.manifesto-body {
+  font-family: var(--f-display);
+  font-weight: 400;
+  font-size: clamp(28px, 3.2vw, 42px);
+  line-height: 1.18;
+  color: var(--ink-deep);
+  letter-spacing: -0.015em;
+  text-wrap: pretty;
+}
+
+.manifesto-body em {
+  font-style: italic;
+  color: var(--leaf-deep); /* AA sobre --cream-soft (Terroso 10) */
+  font-weight: 400;
+}
+
+.manifesto-body strong {
+  font-weight: 500;
+  color: var(--ink-deep);
+  background: color-mix(in oklab, var(--leaf) 22%, transparent);
+  padding: 0 0.1em;
+}
+
+.manifesto-foot {
+  margin-top: 48px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+@media (max-width: 720px) {
+  .manifesto-foot {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.mf-cell {
+  padding: 28px 0 0;
+  border-top: 1.5px solid var(--leaf-line);
+}
+
+.mf-cell .n {
+  font-family: var(--f-display);
+  font-weight: 400;
+  font-size: 52px;
+  line-height: 1;
+  color: var(--ink-deep);
+  letter-spacing: -0.03em;
+}
+
+.mf-cell .l {
+  margin-top: 10px;
+  font-size: 13px;
+  color: var(--ink-mute);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}

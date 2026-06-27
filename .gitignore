@@ -1,0 +1,24 @@
+# See https://docs.github.com/get-started/getting-started-with-git/ignoring-files
+
+/dist
+/tmp
+/out-tsc
+/node_modules
+.angular/
+.vscode/*
+!.vscode/settings.json
+.idea
+npm-debug.log
+yarn-error.log
+
+# Variaveis de ambiente (nunca versionar)
+.env
+.env.*
+!.env.example
+
+# Coverage e cache
+/coverage
+.eslintcache
+.stylelintcache
+
+.vercel

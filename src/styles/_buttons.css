@@ -1,0 +1,101 @@
+/*
+  _buttons.css — Sistema de botoes da Plug
+  Terroso secao 6.1 + 9 (interacao)
+  Botao primario: pilula, --leaf-deep sobre texto branco, hover translateY + --ink-deep
+*/
+
+/* ------------------------------------------------------------------ */
+/* Botao primario — "Actuation" (Terroso 6.1)                          */
+/* ------------------------------------------------------------------ */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--leaf-deep);
+  color: var(--ink-deep); /* WCAG AA 4.64:1 vs cream-bright 3.12:1 */
+  padding: 20px 30px;
+  border-radius: var(--r-pill);
+  font-family: var(--f-body);
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: -0.005em;
+  transition:
+    background var(--t-slow),
+    color var(--t-slow),
+    transform var(--t-slow);
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn-primary:hover {
+  background: var(--ink-deep);
+  color: var(--cream-bright);
+  transform: translateY(-2px);
+}
+
+.btn-primary svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* Seta circular interna — visivel no CTA da hero */
+.btn-primary .arrow {
+  width: 32px;
+  height: 32px;
+  border-radius: var(--r-pill);
+  background: color-mix(in oklab, var(--ink-deep) 18%, transparent);
+  display: grid;
+  place-items: center;
+  margin-left: 6px;
+  transition:
+    background var(--t-slow),
+    transform var(--t-slow);
+}
+
+.btn-primary:hover .arrow {
+  background: var(--cream-bright);
+  color: var(--leaf-deep);
+  transform: translateX(3px);
+}
+
+/* Variante grande para CTA final */
+.btn-primary-lg {
+  font-size: 17px;
+  padding: 22px 32px;
+  background: var(--leaf);
+  color: var(--ink-deep);
+}
+
+.btn-primary-lg:hover {
+  background: var(--cream-bright);
+  color: var(--ink-deep);
+}
+
+.btn-primary-lg .arrow {
+  background: color-mix(in oklab, var(--ink-deep) 18%, transparent);
+}
+
+/* ------------------------------------------------------------------ */
+/* Botao secundario                                                     */
+/* ------------------------------------------------------------------ */
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--cream-deep);
+  color: var(--ink-deep);
+  padding: 16px 24px;
+  border-radius: var(--r-pill);
+  font-family: var(--f-body);
+  font-weight: 500;
+  font-size: 14.5px;
+  transition: background var(--t-base);
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn-secondary:hover {
+  background: var(--cream-deeper);
+}
