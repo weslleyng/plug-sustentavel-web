@@ -59,6 +59,20 @@
   transform: translateX(3px);
 }
 
+/* Estado desabilitado (ex.: passo do simulador sem selecao) */
+.btn-primary:disabled,
+.btn-primary[disabled] {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.btn-primary:disabled:hover,
+.btn-primary[disabled]:hover {
+  background: var(--leaf-deep);
+  color: var(--ink-deep);
+  transform: none;
+}
+
 /* Variante grande para CTA final */
 .btn-primary-lg {
   font-size: 17px;

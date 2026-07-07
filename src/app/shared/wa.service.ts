@@ -9,7 +9,12 @@ export class WaService {
   readonly phone = '5592982862240';
   readonly message = 'Olá, quero saber mais sobre a Plug Sustentável';
 
+  /** Builds a wa.me URL with a custom pre-filled message. */
+  urlFor(message: string): string {
+    return `https://wa.me/${this.phone}?text=${encodeURIComponent(message)}`;
+  }
+
   get url(): string {
-    return `https://wa.me/${this.phone}?text=${encodeURIComponent(this.message)}`;
+    return this.urlFor(this.message);
   }
 }

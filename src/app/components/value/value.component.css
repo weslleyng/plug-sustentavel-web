@@ -107,7 +107,12 @@
   overflow: hidden;
   background:
     repeating-linear-gradient(125deg, rgba(109, 184, 94, 0.1) 0 2px, transparent 2px 24px),
-    linear-gradient(to top, rgba(30, 44, 30, 0.82) 0%, rgba(30, 44, 30, 0.15) 52%, rgba(30, 44, 30, 0.32) 100%),
+    linear-gradient(
+      to top,
+      rgba(30, 44, 30, 0.82) 0%,
+      rgba(30, 44, 30, 0.15) 52%,
+      rgba(30, 44, 30, 0.32) 100%
+    ),
     url('/assets/projetos/projeto-fazendinha/projeto2.webp') center / cover no-repeat;
   display: flex;
   align-items: flex-end;

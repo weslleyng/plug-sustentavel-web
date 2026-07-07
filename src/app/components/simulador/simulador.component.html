@@ -1,0 +1,240 @@
+<section
+  class="simulador breathe"
+  id="simular"
+  data-screen-label="Simulador"
+  aria-labelledby="sim-headline"
+>
+  <div class="wrap">
+    <div class="section-head-split">
+      <div>
+        <div class="kicker">Simulador de economia</div>
+        <h2 id="sim-headline" class="headline-xl">
+          Veja quanto sua conta<br />
+          pode <em>encolher</em>.
+        </h2>
+      </div>
+      <p class="body-lg supporting">
+        Responda três perguntas rápidas e receba uma estimativa preliminar de economia e payback —
+        antes de falar conosco. O estudo completo vem depois, assinado por engenheiro.
+      </p>
+    </div>
+
+    <div class="sim-card">
+      <div class="sim-steps">
+        <span class="sim-steplabel">Etapa {{ step() }} de 2</span>
+        <div
+          class="form-progress"
+          role="progressbar"
+          aria-valuemin="1"
+          aria-valuemax="2"
+          [attr.aria-valuenow]="step()"
+          aria-label="Progresso do simulador"
+        >
+          <span class="form-progress-fill" [class.is-full]="step() === 2"></span>
+        </div>
+      </div>
+
+      @if (step() === 1) {
+        <div class="sim-step" id="sim-step1" tabindex="-1">
+          <fieldset class="sim-group">
+            <legend class="form-legend" id="sim-lbl-conta">Conta de luz média mensal</legend>
+            <div class="form-chips" role="radiogroup" aria-labelledby="sim-lbl-conta">
+              @for (faixa of faixas; track faixa.id) {
+                <button
+                  type="button"
+                  class="form-chip"
+                  role="radio"
+                  [class.is-selected]="conta()?.id === faixa.id"
+                  [attr.aria-checked]="conta()?.id === faixa.id"
+                  (click)="selecionarConta(faixa)"
+                >
+                  {{ faixa.label }}
+                </button>
+              }
+            </div>
+          </fieldset>
+
+          <fieldset class="sim-group">
+            <legend class="form-legend" id="sim-lbl-tipo">Tipo de imóvel / operação</legend>
+            <div class="form-chips" role="radiogroup" aria-labelledby="sim-lbl-tipo">
+              @for (item of tipos; track item.id) {
+                <button
+                  type="button"
+                  class="form-chip"
+                  role="radio"
+                  [class.is-selected]="tipo()?.id === item.id"
+                  [attr.aria-checked]="tipo()?.id === item.id"
+                  (click)="selecionarTipo(item)"
+                >
+                  {{ item.label }}
+                </button>
+              }
+            </div>
+          </fieldset>
+
+          <fieldset class="sim-group">
+            <legend class="form-legend" id="sim-lbl-fase">Em que fase você está?</legend>
+            <div class="form-chips" role="radiogroup" aria-labelledby="sim-lbl-fase">
+              @for (item of fases; track item.id) {
+                <button
+                  type="button"
+                  class="form-chip"
+                  role="radio"
+                  [class.is-selected]="fase()?.id === item.id"
+                  [attr.aria-checked]="fase()?.id === item.id"
+                  (click)="selecionarFase(item)"
+                >
+                  {{ item.label }}
+                </button>
+              }
+            </div>
+          </fieldset>
+
+          <div class="sim-actions">
+            <button
+              type="button"
+              class="btn-primary"
+              [disabled]="!podeAvancar()"
+              (click)="avancar()"
+            >
+              Ver minha estimativa
+              <span class="arrow" aria-hidden="true">
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <line x1="5" y1="12" x2="19" y2="12" />
+                  <polyline points="12 5 19 12 12 19" />
+                </svg>
+              </span>
+            </button>
+            <a class="sim-alt" [href]="wa.url" target="_blank" rel="noopener" data-wa>
+              Prefere falar agora? Chame no WhatsApp
+            </a>
+          </div>
+        </div>
+      }
+
+      @if (step() === 2) {
+        <div class="sim-step sim-step2">
+          <div class="sim-result" id="sim-result" tabindex="-1" aria-live="polite">
+            <div class="meta">Sua estimativa preliminar</div>
+            @if (estimativa(); as est) {
+              <dl class="sim-figures">
+                <div class="sim-fig">
+                  <dt>Economia estimada</dt>
+                  <dd>{{ est.economiaLabel }}</dd>
+                </div>
+                <div class="sim-fig">
+                  <dt>Payback estimado</dt>
+                  <dd>{{ est.paybackLabel }}</dd>
+                </div>
+                <div class="sim-fig">
+                  <dt>Redução na conta</dt>
+                  <dd>{{ est.reducao }}</dd>
+                </div>
+              </dl>
+            }
+            <p class="sim-disclaimer">
+              Estimativa baseada na sua conta atual. O estudo completo, assinado por engenheiro,
+              considera telhado, carga e tarifa real.
+            </p>
+          </div>
+
+          <form class="sim-form" (ngSubmit)="enviar()" novalidate>
+            <p class="sim-formlead">Receba o estudo detalhado em até 48h.</p>
+
+            <div class="form-field">
+              <label for="sim-nome">Nome <span aria-hidden="true">*</span></label>
+              <input
+                id="sim-nome"
+                name="nome"
+                type="text"
+                class="form-input"
+                autocomplete="name"
+                placeholder="Seu nome"
+                aria-required="true"
+                [attr.aria-invalid]="submetido() && !nomeValido()"
+                [ngModel]="nome()"
+                (ngModelChange)="nome.set($event)"
+              />
+            </div>
+
+            <div class="form-field">
+              <label for="sim-wa">WhatsApp <span aria-hidden="true">*</span></label>
+              <input
+                id="sim-wa"
+                name="whatsapp"
+                type="tel"
+                inputmode="tel"
+                class="form-input"
+                autocomplete="tel"
+                placeholder="(92) 90000-0000"
+                aria-required="true"
+                [attr.aria-invalid]="submetido() && !whatsappValido()"
+                [ngModel]="whatsapp()"
+                (ngModelChange)="whatsapp.set($event)"
+              />
+            </div>
+
+            <div class="form-field">
+              <label for="sim-empresa">Empresa <span class="sim-opt">(opcional)</span></label>
+              <input
+                id="sim-empresa"
+                name="empresa"
+                type="text"
+                class="form-input"
+                autocomplete="organization"
+                placeholder="Nome da empresa"
+                [ngModel]="empresa()"
+                (ngModelChange)="empresa.set($event)"
+              />
+            </div>
+
+            <div class="form-field">
+              <label for="sim-email">E-mail <span class="sim-opt">(opcional)</span></label>
+              <input
+                id="sim-email"
+                name="email"
+                type="email"
+                class="form-input"
+                autocomplete="email"
+                placeholder="voce@empresa.com"
+                [ngModel]="email()"
+                (ngModelChange)="email.set($event)"
+              />
+            </div>
+
+            @if (submetido() && !podeEnviar()) {
+              <p class="sim-notice" id="sim-notice" role="alert">
+                Informe seu nome e um WhatsApp válido para receber o estudo.
+              </p>
+            }
+
+            <button type="submit" class="btn-primary">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M17.5 14.4c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7 0-.3-.2-1.3-.5-2.5-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.4.5-.6.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.1-.7-1.6-.9-2.2-.2-.5-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4s-1 1-1 2.4 1 2.8 1.2 3c.1.2 2 3 4.8 4.2.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.5A10 10 0 1 0 12 2z"
+                />
+              </svg>
+              Quero meu estudo detalhado em 48h
+            </button>
+
+            <div class="sim-foot">
+              <button type="button" class="sim-back" (click)="voltar()">← Voltar</button>
+              <span class="sim-seal"
+                >+100 empresas · 25 anos de garantia · resposta em até 30 min</span
+              >
+            </div>
+          </form>
+        </div>
+      }
+    </div>
+  </div>
+</section>
