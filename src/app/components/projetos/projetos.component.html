@@ -34,20 +34,21 @@
         (pointerdown)="onPointerDown($event)"
         (pointerup)="onPointerUp($event)"
         (pointerleave)="onPointerUp($event)"
+        (pointercancel)="onPointerCancel()"
       >
         <div
           #track
           class="track"
           [style.transform]="'translateX(' + offset() + 'px)'"
           [style.transition]="animate() ? 'transform .6s cubic-bezier(.4, 0, .2, 1)' : 'none'"
-          (transitionend)="onTransitionEnd()"
+          (transitionend)="onTransitionEnd($event)"
         >
           @for (slide of slides; track $index) {
             <article
               class="slide"
               role="group"
               aria-roledescription="slide"
-              [attr.aria-label]="$index + ' de ' + projects.length"
+              [attr.aria-label]="slideLabel($index)"
               [attr.inert]="isClone($index) ? '' : null"
             >
               <div class="p-card">

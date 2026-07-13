@@ -161,6 +161,10 @@ export class ProjetosComponent implements OnDestroy {
   private readonly trackEl = viewChild<ElementRef<HTMLElement>>('track');
 
   private timer: ReturnType<typeof setInterval> | null = null;
+  private settleTimer: ReturnType<typeof setTimeout> | null = null;
+  private transitioning = false;
+  private io: IntersectionObserver | null = null;
+  private inView = true;
   private reduced = false;
   private dragging = false;
   private startX = 0;
@@ -171,14 +175,33 @@ export class ProjetosComponent implements OnDestroy {
       this.recompute();
       requestAnimationFrame(() => this.animate.set(true));
       window.addEventListener('resize', this.onResize, { passive: true });
-      this.start();
+      document.addEventListener('visibilitychange', this.onVisibility);
+      const vp = this.viewport()?.nativeElement;
+      if (vp) {
+        this.io = new IntersectionObserver(
+          ([entry]) => {
+            this.inView = entry.isIntersecting;
+            this.inView ? this.start() : this.stop();
+          },
+          { threshold: 0.25 },
+        );
+        this.io.observe(vp);
+      } else {
+        this.start();
+      }
     });
   }
 
   ngOnDestroy(): void {
     this.stop();
+    if (this.settleTimer !== null) {
+      clearTimeout(this.settleTimer);
+      this.settleTimer = null;
+    }
+    this.io?.disconnect();
     if (typeof window !== 'undefined') {
       window.removeEventListener('resize', this.onResize);
+      document.removeEventListener('visibilitychange', this.onVisibility);
     }
   }
 
@@ -212,17 +235,20 @@ export class ProjetosComponent implements OnDestroy {
     return (((this.index() - 1) % n) + n) % n;
   }
 
-  protected onTransitionEnd(): void {
+  // Real 1-based position for a slide index in the cloned track ("2 de 5").
+  protected slideLabel(i: number): string {
     const n = this.projects.length;
-    if (this.index() === 0) {
-      this.jumpTo(n);
-    } else if (this.index() === n + 1) {
-      this.jumpTo(1);
-    }
+    return `${((i - 1 + n) % n) + 1} de ${n}`;
+  }
+
+  protected onTransitionEnd(e: TransitionEvent): void {
+    // Child transitions (thumbs) bubble up here; only the track's own slide counts.
+    if (e.target !== this.trackEl()?.nativeElement || e.propertyName !== 'transform') return;
+    this.settle();
   }
 
   protected start(): void {
-    if (this.reduced || this.timer !== null) return;
+    if (this.reduced || this.timer !== null || !this.inView || document.hidden) return;
     this.timer = setInterval(() => this.next(), 5000);
   }
 
@@ -249,10 +275,34 @@ export class ProjetosComponent implements OnDestroy {
     this.start();
   }
 
+  protected onPointerCancel(): void {
+    this.dragging = false;
+    this.start();
+  }
+
   private go(i: number): void {
+    if (this.transitioning) return;
+    this.transitioning = true;
     this.animate.set(true);
     this.index.set(i);
     this.recompute();
+    // transitionend can be missed (hidden tab) or never fire (reduced motion).
+    this.settleTimer = setTimeout(() => this.settle(), this.reduced ? 0 : 700);
+  }
+
+  // Unlocks navigation and snaps from a clone back to its real slide.
+  private settle(): void {
+    if (this.settleTimer !== null) {
+      clearTimeout(this.settleTimer);
+      this.settleTimer = null;
+    }
+    this.transitioning = false;
+    const n = this.projects.length;
+    if (this.index() === 0) {
+      this.jumpTo(n);
+    } else if (this.index() === n + 1) {
+      this.jumpTo(1);
+    }
   }
 
   private jumpTo(i: number): void {
@@ -264,6 +314,10 @@ export class ProjetosComponent implements OnDestroy {
   private readonly onResize = (): void => {
     this.animate.set(false);
     this.recompute();
+  };
+
+  private readonly onVisibility = (): void => {
+    document.hidden ? this.stop() : this.start();
   };
 
   private recompute(): void {

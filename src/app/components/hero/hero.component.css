@@ -45,6 +45,31 @@
   }
 }
 
+/* H1 em duas escalas: linha de serviços (lead-in) + display de impacto */
+.hero-heading {
+  display: block;
+}
+
+.hero-heading-lead {
+  display: block;
+  max-width: 760px;
+  margin-bottom: 20px;
+}
+
+.hero-heading-display {
+  display: block;
+  width: calc(100% + 120px);
+  max-width: none;
+  margin: 0 -60px 0 0;
+}
+
+@media (max-width: 900px) {
+  .hero-heading-display {
+    width: 100%;
+    margin: 0;
+  }
+}
+
 .hero-footer {
   display: grid;
   grid-template-columns: 1fr 1.1fr;

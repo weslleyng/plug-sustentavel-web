@@ -77,6 +77,7 @@
   display: flex;
   gap: 8px;
   padding: 12px 12px 0;
+  overflow-x: auto;
 }
 
 .p-thumb {
@@ -163,7 +164,6 @@
   font-size: clamp(22px, 2.4vw, 28px);
   letter-spacing: -0.01em;
   color: var(--ink-deep);
-  white-space: nowrap;
 }
 
 .p-metric-l {
@@ -212,8 +212,8 @@
 }
 
 .p-dot {
-  width: 28px;
-  height: 24px;
+  width: 32px;
+  height: 44px;
   display: grid;
   place-items: center;
   padding: 0;
@@ -251,6 +251,17 @@
 
 .p-cta-note {
   color: var(--ink-mute);
+}
+
+@media (max-width: 600px) {
+  .p-controls {
+    gap: 12px;
+  }
+
+  .p-metrics {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px 16px;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
