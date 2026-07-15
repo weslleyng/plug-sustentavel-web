@@ -1,0 +1,609 @@
+- generic [ref=e3]:
+    - navigation [ref=e5]:
+        - generic [ref=e6]:
+            - link "Plug" [ref=e7] [cursor=pointer]:
+                - /url: '#top'
+                - img "Plug Soluções Sustentáveis" [ref=e8]
+            - generic [ref=e9]:
+                - link "Manifesto" [ref=e10] [cursor=pointer]:
+                    - /url: '#manifesto'
+                - link "Serviços" [ref=e11] [cursor=pointer]:
+                    - /url: '#servicos'
+                - link "Processo" [ref=e12] [cursor=pointer]:
+                    - /url: '#processo'
+                - link "Projetos" [ref=e13] [cursor=pointer]:
+                    - /url: '#projetos'
+                - link "Por que a Plug" [ref=e14] [cursor=pointer]:
+                    - /url: '#valor'
+                - link "Clientes" [ref=e15] [cursor=pointer]:
+                    - /url: '#vozes'
+                - link "Dúvidas" [ref=e16] [cursor=pointer]:
+                    - /url: '#faq'
+                - link "Simular" [ref=e17] [cursor=pointer]:
+                    - /url: '#simular'
+            - link "Conversar" [ref=e18] [cursor=pointer]:
+                - /url: https://wa.me/5592982862240?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20a%20Plug%20Sustent%C3%A1vel
+    - generic [ref=e22]:
+        - generic [ref=e23]:
+            - generic [ref=e24]:
+                - generic [ref=e25]: Plug · Engenharia e Arquitetura Sustentável
+                - generic [ref=e26]: Manaus, Amazonas 03°06'S · 60°01'W
+            - heading [level=1] [ref=e27]:
+                - text: Transformamos sua conta de energia em
+                - emphasis [ref=e28]: investimento inteligente
+                - text: .
+            - paragraph [ref=e29]: Projeto, instalação e manutenção de redes de distribuição, subestações, energia solar e eficiência energética — para quem não pode errar.
+            - generic [ref=e30]:
+                - paragraph [ref=e31]: Engenharia e arquitetura para indústrias, condomínios, comércios e distribuidoras — do diagnóstico à homologação, com responsabilidade técnica registrada no CREA e no CAU e o melhor pós-venda da região.
+                - generic [ref=e32]:
+                    - link "Começar um diagnóstico" [ref=e33] [cursor=pointer]:
+                        - /url: https://wa.me/5592982862240?text=Ol%C3%A1%2C%20quero%20come%C3%A7ar%20um%20diagn%C3%B3stico%20com%20a%20Plug%20Sustent%C3%A1vel
+                    - generic [ref=e39]:
+                        - generic [ref=e40]: ★★★★★
+                        - generic [ref=e41]: +100 empresas em Manaus e região
+        - generic [ref=e42]:
+            - generic [ref=e45]:
+                - generic [ref=e46]: Instalação Comercial
+                - generic [ref=e47]: 200 módulos
+            - generic [ref=e49]:
+                - generic [ref=e50]: Fazendinha
+                - generic [ref=e51]: −R$ 20mil / mês
+            - generic [ref=e53]:
+                - generic [ref=e54]: Geração 24 meses
+                - generic [ref=e55]: 412 MWh
+    - generic [ref=e59]:
+        - complementary [ref=e60]:
+            - generic [ref=e61]: Manifesto
+            - paragraph [ref=e62]: Manifesto da Plug Engenharia e Arquitetura Sustentável
+        - generic [ref=e63]:
+            - heading [level=2] [ref=e64]:
+                - text: Energia com
+                - emphasis [ref=e65]: propósito
+                - text: .
+            - paragraph [ref=e66]: 'Acreditamos que engenharia e arquitetura não são apenas técnicas: são uma escolha. A escolha de construir um futuro em que a Amazônia lidera a transição energética, não apenas a contempla.'
+            - paragraph [ref=e67]: 'Somos filhos de Manaus. Conhecemos a força deste território e a responsabilidade que ele carrega. Por isso, não vendemos apenas projetos: entregamos soluções que respeitam a floresta, honram nossos clientes e fortalecem as comunidades ao nosso redor.'
+            - paragraph [ref=e68]: Em cada usina fotovoltaica dimensionada, em cada subestação projetada, em cada automação instalada ou análise de viabilidade financeira apresentada, colocamos o nosso nome com transparência absoluta. E nosso nome significa dedicação, compromisso e excelência.
+            - generic [ref=e69]:
+                - generic [ref=e70]:
+                    - heading "Segurança" [level=3] [ref=e71]
+                    - paragraph [ref=e72]: Nenhum prazo justifica risco. Projetamos pensando em quem vai operar, manter e viver com o que entregamos.
+                - generic [ref=e73]:
+                    - heading "Excelência" [level=3] [ref=e74]
+                    - paragraph [ref=e75]: Não há atalho técnico que valha a reputação construída projeto a projeto. O rigor é nosso padrão mínimo.
+                - generic [ref=e76]:
+                    - heading "Transparência" [level=3] [ref=e77]
+                    - paragraph [ref=e78]: 'O cliente merece entender o que está comprando. Comunicamos com clareza: números, riscos, datas e expectativas reais.'
+                - generic [ref=e79]:
+                    - heading "Inovação" [level=3] [ref=e80]
+                    - paragraph [ref=e81]: Aprendemos com cada projeto. Usamos tecnologia e dados para entregar mais valor, sempre com propósito, nunca por modismo.
+            - paragraph [ref=e82]: 'Trabalhamos com distribuidoras de energia, empresas corporativas e empreendedores que já perceberam: sustentabilidade não é custo, é vantagem competitiva. Ajudamos a transformar essa convicção em energia real e retorno financeiro mensurável.'
+            - paragraph [ref=e83]: 'Não prometemos o impossível. Prometemos presença: do dimensionamento à entrega, da engenharia à arquitetura, do relatório técnico à conversa franca sobre o que funciona e o que precisa melhorar.'
+            - paragraph [ref=e84]: '"Plug não é só um nome. É o ponto de conexão entre o que existe e o que deve existir, entre a energia que temos e o futuro que queremos construir."'
+    - region [ref=e86]:
+        - generic [ref=e87]:
+            - generic [ref=e88]:
+                - generic [ref=e89]:
+                    - generic [ref=e90]: Serviços
+                    - heading [level=2] [ref=e91]:
+                        - text: Seis frentes integradaspara sua transição
+                        - emphasis [ref=e92]: energética
+                        - text: .
+                - paragraph [ref=e93]: Do diagnóstico à manutenção, com mais de 15 anos de engenharia em obras civis, redes elétricas e geração distribuída na Amazônia.
+            - generic [ref=e94]:
+                - article [ref=e95]:
+                    - generic [ref=e96]: '01'
+                    - generic [ref=e97]: Geração distribuída
+                    - heading "Energia Solar Fotovoltaica e Armazenamento de Energia" [level=3] [ref=e98]
+                    - paragraph [ref=e99]: Projetamos, instalamos e operamos plantas fotovoltaicas com opção de instalação direta ou aluguel via associação de geração de energia compartilhada parceira. Também implementamos BESS como backup de energia e peak shifting para redução de faturamento.
+                    - list [ref=e100]:
+                        - listitem [ref=e101]: Usinas até 5 MW (mini e micro GD)
+                        - listitem [ref=e102]: Aluguel via associação compartilhada
+                        - listitem [ref=e103]: Armazenamento BESS
+                - article [ref=e104]:
+                    - generic [ref=e105]: '02'
+                    - generic [ref=e106]: Energia industrial
+                    - heading "Engenharia Elétrica MT/AT" [level=3] [ref=e107]
+                    - paragraph [ref=e108]: Projeto, execução e O&M de elétrica predial, industrial, subestações de média e alta tensão, SPDA, eficiência energética e automação, com migração para o Mercado Livre (ACL e PIE).
+                    - list [ref=e109]:
+                        - listitem [ref=e110]: Subestações MT/AT
+                        - listitem [ref=e111]: Migração ACL/PIE
+                        - listitem [ref=e112]: Operação e manutenção
+                - article [ref=e113]:
+                    - generic [ref=e114]: '03'
+                    - generic [ref=e115]: Obra integrada
+                    - heading "Projeto e Arquitetura" [level=3] [ref=e116]
+                    - paragraph [ref=e117]: Projetos integrados de engenharia e arquitetura, construção, reforma e manutenção civil, hidráulica e sanitária sob um único contrato.
+                    - list [ref=e118]:
+                        - listitem [ref=e119]: Projeto executivo integrado
+                        - listitem [ref=e120]: Construção e reforma
+                        - listitem [ref=e121]: Manutenção predial
+                - article [ref=e122]:
+                    - generic [ref=e123]: '04'
+                    - generic [ref=e124]: Mobilidade elétrica
+                    - heading "Eletromobilidade" [level=3] [ref=e125]
+                    - paragraph [ref=e126]: Estudo de viabilidade, instalação e O&M de eletropostos e carregadores elétricos veiculares, do wall box aos carregadores rápidos com softwares para pagamento.
+                    - list [ref=e127]:
+                        - listitem [ref=e128]: Carregadores CA e CC rápidos de 7,8 a 160 kW
+                        - listitem [ref=e129]: Estudo de viabilidade de frota elétrica
+                        - listitem [ref=e130]: Captação de investimento para transição de frota elétrica
+                - article [ref=e131]:
+                    - generic [ref=e132]: '05'
+                    - generic [ref=e133]: Segurança & IoT
+                    - heading "SCI, Monitoramento e Automação" [level=3] [ref=e134]
+                    - paragraph [ref=e135]: Implementação de Sistemas de Detecção e Combate a Incêndio e Pânico, CFTV e Casas Inteligentes em residências, comércios e patrimônio histórico.
+                    - list [ref=e136]:
+                        - listitem [ref=e137]: Detecção e combate a incêndio
+                        - listitem [ref=e138]: CFTV
+                        - listitem [ref=e139]: Casas inteligentes
+                - article [ref=e140]:
+                    - generic [ref=e141]: '06'
+                    - generic [ref=e142]: Educação profissionalizante
+                    - heading "Academia Plugados" [level=3] [ref=e143]
+                    - paragraph [ref=e144]: Trilhas de qualificação profissional para eletricistas, técnicos e engenheiros em projeto, instalação, operação e manutenção elétrica.
+                    - list [ref=e145]:
+                        - listitem [ref=e146]: Trilha do projetista elétrico
+                        - listitem [ref=e147]: Trilha do instalador solar, de baterias e carros elétricos
+                        - listitem [ref=e148]: Trilha do instalador de Smart Home
+            - generic [ref=e149]:
+                - link "Falar com a equipe" [ref=e150] [cursor=pointer]:
+                    - /url: https://wa.me/5592982862240?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20a%20Plug%20Sustent%C3%A1vel
+                - generic [ref=e156]: Atendimento humano, técnico, no WhatsApp.
+    - generic [ref=e159]:
+        - generic [ref=e160]:
+            - generic [ref=e161]:
+                - generic [ref=e162]: Processo
+                - heading [level=2] [ref=e163]:
+                    - text: Quatro estágios.
+                    - emphasis [ref=e164]: Um único responsável.
+            - paragraph [ref=e165]: Do primeiro café até o último parafuso. Você não vira gerente de obra, não coordena três empresas, não recebe boleto surpresa.
+        - generic [ref=e166]:
+            - article [ref=e167]:
+                - generic [ref=e168]:
+                    - generic [ref=e169]: '01'
+                    - heading "Diagnóstico individual" [level=3] [ref=e170]
+                    - paragraph [ref=e171]: Elaboramos um diagnóstico completo da sua necessidade, apontando problemas e identificando ações corretivas e oportunidades de melhoria, com base em análises de dados reais.
+                - generic [ref=e172]: Semana 01
+            - article [ref=e173]:
+                - generic [ref=e174]:
+                    - generic [ref=e175]: '02'
+                    - heading "Projeto integrado" [level=3] [ref=e176]
+                    - paragraph [ref=e177]: Solução em arquitetura e engenharia, com responsabilidade técnica homologada junto ao CREA e ao CAU em um único caderno de obra.
+                - generic [ref=e178]: Semana 02–04
+            - article [ref=e179]:
+                - generic [ref=e180]:
+                    - generic [ref=e181]: '03'
+                    - heading "Instalação" [level=3] [ref=e182]
+                    - paragraph [ref=e183]: Equipe própria, equipamentos de primeira linha, testados e homologados no mais alto grau de qualidade, e cronograma que respeita sua operação, sem interferir na sua produção.
+                - generic [ref=e184]: Semana 05–08
+            - article [ref=e185]:
+                - generic [ref=e186]:
+                    - generic [ref=e187]: '04'
+                    - heading "Pós-venda" [level=3] [ref=e188]
+                    - paragraph [ref=e189]: Entrega com manual de operação e manutenção, acompanhamento em garantia, SLA de pós-venda e monitoramento online.
+                - generic [ref=e190]: Ano 00–25
+        - generic [ref=e191]:
+            - generic [ref=e192]:
+                - generic [ref=e193]: Diagnóstico
+                - generic [ref=e196]: 05 dias
+            - generic [ref=e197]:
+                - generic [ref=e198]: Projeto
+                - generic [ref=e201]: 14 dias
+            - generic [ref=e202]:
+                - generic [ref=e203]: Instalação
+                - generic [ref=e206]: 28 dias
+            - generic [ref=e207]:
+                - generic [ref=e208]: Primeira geração
+                - generic [ref=e211]: 60 dias
+    - region [ref=e213]:
+        - generic [ref=e214]:
+            - generic [ref=e215]:
+                - generic [ref=e216]:
+                    - generic [ref=e217]: Projetos
+                    - heading [level=2] [ref=e218]:
+                        - text: Obras entregues,resultados
+                        - emphasis [ref=e219]: medidos
+                        - text: .
+                - paragraph [ref=e220]: De residências a usinas de grande porte e ao poder público — projetos reais, com economia e payback comprovados.
+            - region "Projetos entregues pela Plug" [ref=e221]:
+                - generic [ref=e223]:
+                    - group "5 de 5" [ref=e224]:
+                        - generic [ref=e225]:
+                            - img "Câmara Municipal de Manaus — usina solar de 785 kWp" [ref=e227]
+                            - group "Galeria do projeto" [ref=e228]:
+                                - button "Ver foto 1" [pressed] [ref=e229] [cursor=pointer]
+                                - button "Ver foto 2" [ref=e230] [cursor=pointer]
+                                - button "Ver foto 3" [ref=e231] [cursor=pointer]
+                                - button "Ver foto 4" [ref=e232] [cursor=pointer]
+                            - generic [ref=e233]:
+                                - generic [ref=e234]: Poder público · Grande porte
+                                - heading "Câmara Municipal de Manaus" [level=3] [ref=e235]
+                                - paragraph [ref=e236]: Usina de 1.428 módulos fotovoltaicos para o poder público, com 785,40 kWp de potência total e geração estimada de 77.500 kWh por mês.
+                                - generic [ref=e237]:
+                                    - generic [ref=e238]:
+                                        - term [ref=e239]: 1.428 módulos
+                                        - definition [ref=e240]: Sistema fotovoltaico
+                                    - generic [ref=e241]:
+                                        - term [ref=e242]: 785,40 kWp
+                                        - definition [ref=e243]: Potência total
+                                    - generic [ref=e244]:
+                                        - term [ref=e245]: 77.500 kWh/mês
+                                        - definition [ref=e246]: Geração estimada
+                    - group "1 de 5" [ref=e247]:
+                        - generic [ref=e248]:
+                            - img "Fazendinha — cabine de medição e usina solar em 13,8 kV" [ref=e250]
+                            - group "Galeria do projeto" [ref=e251]:
+                                - button "Ver foto 1" [pressed] [ref=e252] [cursor=pointer]
+                                - button "Ver foto 2" [ref=e253] [cursor=pointer]
+                            - generic [ref=e254]:
+                                - generic [ref=e255]: Indústria · Eficiência energética
+                                - heading "Fazendinha" [level=3] [ref=e256]
+                                - paragraph [ref=e257]: Cabine de medição e proteção primária em 13,8 kV, usina solar de 226,98 kWp e banco de capacitores automático de 120 kvar. Modernização completa da alimentação das cargas industriais e administrativas.
+                                - generic [ref=e258]:
+                                    - generic [ref=e259]:
+                                        - term [ref=e260]: 226,98 kWp
+                                        - definition [ref=e261]: Potência instalada
+                                    - generic [ref=e262]:
+                                        - term [ref=e263]: 120 kvar
+                                        - definition [ref=e264]: Correção de fator
+                                    - generic [ref=e265]:
+                                        - term [ref=e266]: R$ 20 mil/mês
+                                        - definition [ref=e267]: Economia estimada
+                                    - generic [ref=e268]:
+                                        - term [ref=e269]: 4 anos
+                                        - definition [ref=e270]: Payback
+                    - group "2 de 5" [ref=e271]:
+                        - generic [ref=e272]:
+                            - img "Instalação comercial — 200 módulos fotovoltaicos" [ref=e274]
+                            - group "Galeria do projeto" [ref=e275]:
+                                - button "Ver foto 1" [pressed] [ref=e276] [cursor=pointer]
+                                - button "Ver foto 2" [ref=e277] [cursor=pointer]
+                            - generic [ref=e278]:
+                                - generic [ref=e279]: Comercial · Geração distribuída
+                                - heading "Instalação Comercial" [level=3] [ref=e280]
+                                - paragraph [ref=e281]: Instalação de 200 módulos fotovoltaicos dimensionada para a demanda do estabelecimento, com retorno do investimento em apenas 30 meses.
+                                - generic [ref=e282]:
+                                    - generic [ref=e283]:
+                                        - term [ref=e284]: 200 módulos
+                                        - definition [ref=e285]: Sistema fotovoltaico
+                                    - generic [ref=e286]:
+                                        - term [ref=e287]: R$ 10 mil/mês
+                                        - definition [ref=e288]: Geração estimada
+                                    - generic [ref=e289]:
+                                        - term [ref=e290]: 2,5 anos
+                                        - definition [ref=e291]: Payback
+                    - group "3 de 5" [ref=e292]:
+                        - generic [ref=e293]:
+                            - img "Residencial híbrido — sistema solar com banco de baterias" [ref=e295]
+                            - group "Galeria do projeto" [ref=e296]:
+                                - button "Ver foto 1" [pressed] [ref=e297] [cursor=pointer]
+                                - button "Ver foto 2" [ref=e298] [cursor=pointer]
+                            - generic [ref=e299]:
+                                - generic [ref=e300]: Residencial · Backup com baterias
+                                - heading "Residencial Híbrido" [level=3] [ref=e301]
+                                - paragraph [ref=e302]: Sistema solar híbrido de 24,57 kWp com 10 kW de inversores autônomos e banco de baterias de 14,4 kWh. Mantém as cargas emergenciais por até 12 horas sem geração — e indefinidamente com o sol do dia. Dispensa gerador.
+                                - generic [ref=e303]:
+                                    - generic [ref=e304]:
+                                        - term [ref=e305]: 24,57 kWp
+                                        - definition [ref=e306]: Potência total
+                                    - generic [ref=e307]:
+                                        - term [ref=e308]: 14,4 kWh
+                                        - definition [ref=e309]: Banco de baterias
+                                    - generic [ref=e310]:
+                                        - term [ref=e311]: 12 h
+                                        - definition [ref=e312]: Autonomia sem sol
+                                    - generic [ref=e313]:
+                                        - term [ref=e314]: R$ 2.100/mês
+                                        - definition [ref=e315]: Geração estimada
+                                    - generic [ref=e316]:
+                                        - term [ref=e317]: 4 anos
+                                        - definition [ref=e318]: Payback
+                    - group "4 de 5" [ref=e319]:
+                        - generic [ref=e320]:
+                            - img "Residencial de alto consumo — sistema solar de 42 kWp" [ref=e322]
+                            - group "Galeria do projeto" [ref=e323]:
+                                - button "Ver foto 1" [pressed] [ref=e324] [cursor=pointer]
+                                - button "Ver foto 2" [ref=e325] [cursor=pointer]
+                                - button "Ver foto 3" [ref=e326] [cursor=pointer]
+                            - generic [ref=e327]:
+                                - generic [ref=e328]: Residencial · Alto consumo
+                                - heading "Residencial 42 kWp" [level=3] [ref=e329]
+                                - paragraph [ref=e330]: Sistema residencial de 42,12 kWp dimensionado para alto consumo, com retorno do investimento em 30 meses.
+                                - generic [ref=e331]:
+                                    - generic [ref=e332]:
+                                        - term [ref=e333]: 42,12 kWp
+                                        - definition [ref=e334]: Potência total
+                                    - generic [ref=e335]:
+                                        - term [ref=e336]: R$ 3.500/mês
+                                        - definition [ref=e337]: Geração estimada
+                                    - generic [ref=e338]:
+                                        - term [ref=e339]: 2,5 anos
+                                        - definition [ref=e340]: Payback
+                    - group "5 de 5" [ref=e341]:
+                        - generic [ref=e342]:
+                            - img "Câmara Municipal de Manaus — usina solar de 785 kWp" [ref=e344]
+                            - group "Galeria do projeto" [ref=e345]:
+                                - button "Ver foto 1" [pressed] [ref=e346] [cursor=pointer]
+                                - button "Ver foto 2" [ref=e347] [cursor=pointer]
+                                - button "Ver foto 3" [ref=e348] [cursor=pointer]
+                                - button "Ver foto 4" [ref=e349] [cursor=pointer]
+                            - generic [ref=e350]:
+                                - generic [ref=e351]: Poder público · Grande porte
+                                - heading "Câmara Municipal de Manaus" [level=3] [ref=e352]
+                                - paragraph [ref=e353]: Usina de 1.428 módulos fotovoltaicos para o poder público, com 785,40 kWp de potência total e geração estimada de 77.500 kWh por mês.
+                                - generic [ref=e354]:
+                                    - generic [ref=e355]:
+                                        - term [ref=e356]: 1.428 módulos
+                                        - definition [ref=e357]: Sistema fotovoltaico
+                                    - generic [ref=e358]:
+                                        - term [ref=e359]: 785,40 kWp
+                                        - definition [ref=e360]: Potência total
+                                    - generic [ref=e361]:
+                                        - term [ref=e362]: 77.500 kWh/mês
+                                        - definition [ref=e363]: Geração estimada
+                    - group "1 de 5" [ref=e364]:
+                        - generic [ref=e365]:
+                            - img "Fazendinha — cabine de medição e usina solar em 13,8 kV" [ref=e367]
+                            - group "Galeria do projeto" [ref=e368]:
+                                - button "Ver foto 1" [pressed] [ref=e369] [cursor=pointer]
+                                - button "Ver foto 2" [ref=e370] [cursor=pointer]
+                            - generic [ref=e371]:
+                                - generic [ref=e372]: Indústria · Eficiência energética
+                                - heading "Fazendinha" [level=3] [ref=e373]
+                                - paragraph [ref=e374]: Cabine de medição e proteção primária em 13,8 kV, usina solar de 226,98 kWp e banco de capacitores automático de 120 kvar. Modernização completa da alimentação das cargas industriais e administrativas.
+                                - generic [ref=e375]:
+                                    - generic [ref=e376]:
+                                        - term [ref=e377]: 226,98 kWp
+                                        - definition [ref=e378]: Potência instalada
+                                    - generic [ref=e379]:
+                                        - term [ref=e380]: 120 kvar
+                                        - definition [ref=e381]: Correção de fator
+                                    - generic [ref=e382]:
+                                        - term [ref=e383]: R$ 20 mil/mês
+                                        - definition [ref=e384]: Economia estimada
+                                    - generic [ref=e385]:
+                                        - term [ref=e386]: 4 anos
+                                        - definition [ref=e387]: Payback
+                - generic [ref=e388]:
+                    - button "Projeto anterior" [ref=e389] [cursor=pointer]
+                    - group "Selecionar projeto" [ref=e392]:
+                        - button "Fazendinha" [ref=e393] [cursor=pointer]
+                        - button "Instalação Comercial" [ref=e394] [cursor=pointer]
+                        - button "Residencial Híbrido" [ref=e395] [cursor=pointer]
+                        - button "Residencial 42 kWp" [ref=e396] [cursor=pointer]
+                        - button "Câmara Municipal de Manaus" [ref=e397] [cursor=pointer]
+                    - button "Próximo projeto" [ref=e398] [cursor=pointer]
+                - generic [ref=e401]:
+                    - link "Quero um projeto assim" [ref=e402] [cursor=pointer]:
+                        - /url: https://wa.me/5592982862240?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20a%20Plug%20Sustent%C3%A1vel
+                    - generic [ref=e408]: Atendimento humano, técnico, no WhatsApp.
+    - generic [ref=e411]:
+        - generic [ref=e412]:
+            - generic [ref=e413]:
+                - generic [ref=e414]: Por que a Plug
+                - heading [level=2] [ref=e415]:
+                    - text: Arquitetura antesde
+                    - emphasis [ref=e416]: painel solar
+                    - text: .
+            - paragraph [ref=e417]: Os motivos reais pelos quais indústrias, clínicas e redes de varejo escolhem quem entrega tudo dentro do mesmo caderno de obra.
+        - generic [ref=e418]:
+            - generic [ref=e420]:
+                - generic [ref=e421]:
+                    - generic [ref=e422]: '01'
+                    - generic [ref=e423]:
+                        - heading "Economia de até 90%" [level=3] [ref=e424]
+                        - paragraph [ref=e425]: Redução imediata na conta já no terceiro mês, com medição, documentação e comprovação via aplicativo.
+                    - generic [ref=e426]: −90%
+                - generic [ref=e427]:
+                    - generic [ref=e428]: '02'
+                    - generic [ref=e429]:
+                        - heading "Um contrato, três especialidades" [level=3] [ref=e430]
+                        - paragraph [ref=e431]: Projeto, instalação e manutenção sob um único responsável, sem troca de responsabilidades entre fornecedores. Assumimos todos os ônus de nosso trabalho técnico.
+                    - generic [ref=e432]: 3 em 1
+                - generic [ref=e433]:
+                    - generic [ref=e434]: '03'
+                    - generic [ref=e435]:
+                        - heading "Equipamentos Tier 1" [level=3] [ref=e436]
+                        - paragraph [ref=e437]: Somos especialistas em controle de qualidade de materiais e, dessa forma, só trabalhamos com equipamentos do mais alto grau de qualidade, com certificados internacionais e garantias comprovadas de empresas sólidas no mercado.
+                    - generic [ref=e438]: T1
+                - generic [ref=e439]:
+                    - generic [ref=e440]: '04'
+                    - generic [ref=e441]:
+                        - heading "Retorno do Investimento" [level=3] [ref=e442]
+                        - paragraph [ref=e443]: Todos os nossos orçamentos são realizados buscando eficiência operacional e financeira e trazem dados com cálculo de retorno de investimento, para acompanhamento e certeza dos resultados esperados.
+            - generic [ref=e444]:
+                - generic [ref=e445]: Obra ativa · Iranduba
+                - generic [ref=e447]:
+                    - generic [ref=e448]:
+                        - text: '412'
+                        - emphasis [ref=e449]: MWh
+                    - generic [ref=e450]: Geração acumulada em 24 meses — suficiente para abastecer 195 residências médias no mesmo período.
+                - generic [ref=e451]: Cobertura industrial · fim de tarde
+    - generic [ref=e454]:
+        - generic [ref=e455]:
+            - generic [ref=e456]:
+                - generic [ref=e457]: Quem já plugou
+                - heading [level=2] [ref=e458]:
+                    - text: Empresários que pararamde
+                    - emphasis [ref=e459]: temer o boleto
+                    - text: .
+            - paragraph [ref=e460]: Cases reais, em Manaus e interior. Sem narrativa ensaiada, sem número redondo de marketing — números de balanço.
+        - generic [ref=e461]:
+            - article [ref=e462]:
+                - generic [ref=e463]: ★★★★★
+                - paragraph [ref=e464]: “
+                - paragraph [ref=e465]:
+                    - text: A conta do meu mercado caiu de
+                    - emphasis [ref=e466]: R$ 18 mil para R$ 900
+                    - text: no segundo mês. Em dois anos e meio o sistema se pagou — e o atendimento deles continua o mesmo de quando assinamos.
+                - generic [ref=e467]:
+                    - generic [ref=e468]: RM
+                    - generic [ref=e469]:
+                        - generic [ref=e470]: Ricardo Medeiros
+                        - generic [ref=e471]: Manaus · AM · Varejo
+            - article [ref=e472]:
+                - paragraph [ref=e473]: “
+                - paragraph [ref=e474]:
+                    - text: Contratei porque eles entregam o projeto
+                    - emphasis [ref=e475]: arquitetônico junto
+                    - text: . Meu galpão ficou mais bonito, mais eficiente e com energia solar. Três problemas, um contrato.
+                - generic [ref=e476]:
+                    - generic [ref=e477]: CS
+                    - generic [ref=e478]:
+                        - generic [ref=e479]: Camila Souza
+                        - generic [ref=e480]: Iranduba · AM · Indústria
+                - generic [ref=e481]: ★★★★★
+            - article [ref=e482]:
+                - paragraph [ref=e483]: “
+                - paragraph [ref=e484]:
+                    - text: Eu já tinha recebido quatro orçamentos. A Plug foi a
+                    - emphasis [ref=e485]: única
+                    - text: que fez visita técnica, cálculo de retorno em Excel e entregou no prazo.
+                - generic [ref=e486]:
+                    - generic [ref=e487]: JL
+                    - generic [ref=e488]:
+                        - generic [ref=e489]: Juliana Lima
+                        - generic [ref=e490]: Parintins · AM · Clínica
+                - generic [ref=e491]: ★★★★★
+    - generic [ref=e495]:
+        - generic [ref=e496]:
+            - generic [ref=e497]: Dúvidas frequentes
+            - heading "Respostas diretas, que explicam o detalhe que não deixamos passar despercebido." [level=2] [ref=e498]: Respostas diretas,que explicam o detalheque não deixamos passar despercebido.
+            - paragraph [ref=e499]: Se a sua pergunta não está aqui, manda no WhatsApp. Um especialista — não um robô — responde em até 30 minutos em dias úteis.
+            - link "Falar no WhatsApp" [ref=e500] [cursor=pointer]:
+                - /url: https://wa.me/5592982862240?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20a%20Plug%20Sustent%C3%A1vel
+        - generic [ref=e506]:
+            - group [ref=e507]:
+                - generic "Quanto custa um sistema para minha empresa?" [ref=e508] [cursor=pointer]
+                - generic [ref=e513]: Varia com consumo e porte. Para pequenos comércios, sistemas começam em torno de R$ 28 mil; para indústrias, é proporcional ao telhado disponível. Na visita técnica entregamos proposta com cálculo de retorno detalhado — gratuita e sem compromisso.
+            - group [ref=e514]:
+                - generic "Em quanto tempo o sistema se paga?" [ref=e515] [cursor=pointer]
+            - group [ref=e518]:
+                - generic "Preciso contratar arquiteto e engenheiro separado?" [ref=e519] [cursor=pointer]
+            - group [ref=e522]:
+                - generic "E se faltar energia na rede? O sistema funciona?" [ref=e523] [cursor=pointer]
+            - group [ref=e526]:
+                - generic "A instalação atrapalha o funcionamento da empresa?" [ref=e527] [cursor=pointer]
+            - group [ref=e530]:
+                - generic "Vocês instalam carregadores para carros elétricos?" [ref=e531] [cursor=pointer]
+            - group [ref=e534]:
+                - generic "A Plug atende subestações e média/alta tensão?" [ref=e535] [cursor=pointer]
+            - group [ref=e538]:
+                - generic "A Plug também faz projeto de arquitetura?" [ref=e539] [cursor=pointer]
+            - group [ref=e542]:
+                - generic "Vocês trabalham com detecção de incêndio e automação?" [ref=e543] [cursor=pointer]
+            - group [ref=e546]:
+                - generic "O que é a Academia Plugados?" [ref=e547] [cursor=pointer]
+    - region [ref=e551]:
+        - generic [ref=e552]:
+            - generic [ref=e553]:
+                - generic [ref=e554]:
+                    - generic [ref=e555]: Simulador de economia
+                    - heading [level=2] [ref=e556]:
+                        - text: Veja quanto sua conta pode
+                        - emphasis [ref=e557]: encolher
+                        - text: .
+                - paragraph [ref=e558]: Responda três perguntas rápidas e receba uma estimativa preliminar de economia e payback — antes de falar conosco. O estudo completo vem depois, assinado por engenheiro.
+            - generic [ref=e559]:
+                - generic [ref=e560]:
+                    - generic [ref=e561]: Etapa 1 de 2
+                    - progressbar "Progresso do simulador" [ref=e562]
+                - generic [ref=e564]:
+                    - group [ref=e565]:
+                        - radiogroup "Conta de luz média mensal" [ref=e567]:
+                            - radio "Até R$ 1.000" [ref=e568] [cursor=pointer]
+                            - radio "R$ 1.000 – R$ 5.000" [ref=e569] [cursor=pointer]
+                            - radio "R$ 5.000 – R$ 15.000" [ref=e570] [cursor=pointer]
+                            - radio "R$ 15.000 – R$ 50.000" [ref=e571] [cursor=pointer]
+                            - radio "Acima de R$ 50.000" [ref=e572] [cursor=pointer]
+                    - group [ref=e573]:
+                        - radiogroup "Tipo de imóvel / operação" [ref=e575]:
+                            - radio "Residencial" [ref=e576] [cursor=pointer]
+                            - radio "Comércio / Escritório" [ref=e577] [cursor=pointer]
+                            - radio "Indústria / Galpão" [ref=e578] [cursor=pointer]
+                            - radio "Rural / Agronegócio" [ref=e579] [cursor=pointer]
+                            - radio "Poder público" [ref=e580] [cursor=pointer]
+                    - group [ref=e581]:
+                        - radiogroup "Em que fase você está?" [ref=e583]:
+                            - radio "Quero contratar agora" [ref=e584] [cursor=pointer]
+                            - radio "Estou orçando / comparando" [ref=e585] [cursor=pointer]
+                            - radio "Só pesquisando" [ref=e586] [cursor=pointer]
+                    - generic [ref=e587]:
+                        - button "Ver minha estimativa" [disabled] [ref=e588]
+                        - link "Prefere falar agora? Chame no WhatsApp" [ref=e592] [cursor=pointer]:
+                            - /url: https://wa.me/5592982862240?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20a%20Plug%20Sustent%C3%A1vel
+    - generic [ref=e594]:
+        - generic [ref=e595]:
+            - generic [ref=e596]: Diagnóstico gratuito
+            - heading [level=2] [ref=e597]:
+                - text: Pare de financiara concessionária.
+                - emphasis [ref=e598]: Comece pelo diagnóstico.
+            - paragraph [ref=e599]: Uma mensagem no WhatsApp. Em até 48 horas, um estudo personalizado de quanto sua empresa pode economizar — assinado por engenheiro, não por vendedor.
+            - link "Quero meu diagnóstico" [ref=e600] [cursor=pointer]:
+                - /url: https://wa.me/5592982862240?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20a%20Plug%20Sustent%C3%A1vel
+            - generic [ref=e606]: Resposta em até 30 min · Sem compromisso · (92) 98286-2240
+        - complementary [ref=e607]:
+            - generic [ref=e608]: Contrato médio
+            - generic [ref=e609]: 60 dias
+            - generic [ref=e611]: Retorno médio
+            - generic [ref=e612]: 3–5 anos
+            - generic [ref=e614]: Garantia
+            - generic [ref=e615]: 25 anos
+    - contentinfo [ref=e617]:
+        - generic [ref=e618]:
+            - generic [ref=e619]:
+                - generic [ref=e620]:
+                    - img "Plug Soluções Sustentáveis" [ref=e621]
+                    - paragraph [ref=e622]: Arquitetura, engenharia e energia sob um único contrato — para empresas que querem crescer sem pagar o preço da conta de luz.
+                - generic [ref=e623]:
+                    - heading "Navegação" [level=3] [ref=e624]
+                    - list [ref=e625]:
+                        - listitem [ref=e626]:
+                            - link "Manifesto" [ref=e627] [cursor=pointer]:
+                                - /url: '#manifesto'
+                        - listitem [ref=e628]:
+                            - link "Serviços" [ref=e629] [cursor=pointer]:
+                                - /url: '#servicos'
+                        - listitem [ref=e630]:
+                            - link "Processo" [ref=e631] [cursor=pointer]:
+                                - /url: '#processo'
+                        - listitem [ref=e632]:
+                            - link "Por que a Plug" [ref=e633] [cursor=pointer]:
+                                - /url: '#valor'
+                        - listitem [ref=e634]:
+                            - link "Clientes" [ref=e635] [cursor=pointer]:
+                                - /url: '#vozes'
+                        - listitem [ref=e636]:
+                            - link "Dúvidas" [ref=e637] [cursor=pointer]:
+                                - /url: '#faq'
+                - generic [ref=e638]:
+                    - heading "Contato" [level=3] [ref=e639]
+                    - list [ref=e640]:
+                        - listitem [ref=e641]:
+                            - link "WhatsApp" [ref=e642] [cursor=pointer]:
+                                - /url: https://wa.me/5592982862240?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20a%20Plug%20Sustent%C3%A1vel
+                        - listitem [ref=e643]: (92) 98286-2240
+                        - listitem [ref=e644]: Manaus · AM
+                - generic [ref=e645]:
+                    - heading "Serviços" [level=3] [ref=e646]
+                    - list [ref=e647]:
+                        - listitem [ref=e648]:
+                            - link "Energia Solar Fotovoltaica" [ref=e649] [cursor=pointer]:
+                                - /url: '#servicos'
+                        - listitem [ref=e650]:
+                            - link "Eletromobilidade" [ref=e651] [cursor=pointer]:
+                                - /url: '#servicos'
+                        - listitem [ref=e652]:
+                            - link "Engenharia Elétrica MT/AT" [ref=e653] [cursor=pointer]:
+                                - /url: '#servicos'
+                        - listitem [ref=e654]:
+                            - link "Projeto e Arquitetura" [ref=e655] [cursor=pointer]:
+                                - /url: '#servicos'
+                        - listitem [ref=e656]:
+                            - link "Segurança e Automação" [ref=e657] [cursor=pointer]:
+                                - /url: '#servicos'
+                        - listitem [ref=e658]:
+                            - link "Plug Educação Técnica" [ref=e659] [cursor=pointer]:
+                                - /url: '#servicos'
+            - generic [ref=e660]:
+                - generic [ref=e661]: © 2026 Plug Soluções Sustentáveis
+                - generic [ref=e662]: Arquitetura · Engenharia · Energia

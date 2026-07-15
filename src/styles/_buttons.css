@@ -12,7 +12,7 @@
   align-items: center;
   gap: 12px;
   background: var(--leaf-deep);
-  color: var(--ink-deep); /* WCAG AA 4.64:1 vs cream-bright 3.12:1 */
+  color: var(--ink-shadow); /* WCAG AA 4.85:1 (--ink-deep reprova: 4.43:1) */
   padding: 20px 30px;
   border-radius: var(--r-pill);
   font-family: var(--f-body);
@@ -69,8 +69,13 @@
 .btn-primary:disabled:hover,
 .btn-primary[disabled]:hover {
   background: var(--leaf-deep);
-  color: var(--ink-deep);
+  color: var(--ink-shadow);
   transform: none;
+}
+
+.btn-primary:focus-visible {
+  outline: 2px solid var(--ink-deep);
+  outline-offset: 3px;
 }
 
 /* Variante grande para CTA final */

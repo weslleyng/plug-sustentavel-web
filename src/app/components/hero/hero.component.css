@@ -4,7 +4,7 @@
 
 .hero {
   position: relative;
-  padding: 180px 0 0;
+  padding: clamp(120px, 14vh, 160px) 0 0;
   overflow: hidden;
 }
 
@@ -17,7 +17,7 @@
   display: grid;
   grid-template-columns: 1fr auto;
   align-items: end;
-  margin-bottom: 64px;
+  margin-bottom: 56px;
   gap: 24px;
 }
 
@@ -31,43 +31,32 @@
   line-height: 1.5;
 }
 
-/* Headline de hero — bleeds off canvas */
-.hero-display {
-  width: calc(100% + 120px);
-  max-width: none;
-  margin: 0 -60px 0 0;
-}
+@media (max-width: 560px) {
+  .hero-eyebrow {
+    grid-template-columns: 1fr;
+    align-items: start;
+    gap: 12px;
+  }
 
-@media (max-width: 900px) {
-  .hero-display {
-    width: 100%;
-    margin: 0;
+  .hero-eyebrow .coords {
+    text-align: left;
   }
 }
 
-/* H1 em duas escalas: linha de serviços (lead-in) + display de impacto */
+/* H1 único em escala display — hierarquia de um só nível (Terroso 4.2/4.3) */
 .hero-heading {
-  display: block;
+  margin: 0 0 28px;
+  max-width: 1080px;
 }
 
-.hero-heading-lead {
-  display: block;
-  max-width: 760px;
-  margin-bottom: 20px;
-}
-
-.hero-heading-display {
-  display: block;
-  width: calc(100% + 120px);
-  max-width: none;
-  margin: 0 -60px 0 0;
-}
-
-@media (max-width: 900px) {
-  .hero-heading-display {
-    width: 100%;
-    margin: 0;
-  }
+/* Sub-headline: a lista de serviços sai do H1 e vira apoio em Manrope */
+.hero-sub {
+  font-family: var(--f-body);
+  font-size: clamp(16px, 1.4vw, 19px);
+  line-height: 1.6;
+  color: var(--ink-soft);
+  max-width: 640px;
+  margin: 0;
 }
 
 .hero-footer {
@@ -75,7 +64,7 @@
   grid-template-columns: 1fr 1.1fr;
   gap: 80px;
   align-items: end;
-  margin-top: 72px;
+  margin-top: 64px;
 }
 
 @media (max-width: 900px) {
@@ -89,8 +78,8 @@
   font-family: var(--f-display);
   font-weight: 300;
   font-style: italic;
-  font-size: clamp(22px, 2.3vw, 28px);
-  line-height: 1.35;
+  font-size: clamp(20px, 2vw, 25px);
+  line-height: 1.4;
   color: var(--ink-soft);
   max-width: 520px;
   margin: 0;
@@ -117,68 +106,69 @@
   font-size: 14px;
 }
 
-/* Faixa de imagens em tela cheia abaixo do fold */
+/* Faixa de provas em tela cheia — painéis compõem hachura + scrim + foto */
 .hero-strip {
   position: relative;
-  margin-top: 120px;
+  margin-top: 88px;
   height: 72vh;
   min-height: 520px;
   max-height: 760px;
   display: grid;
   grid-template-columns: 0.9fr 1.6fr 0.8fr;
-  gap: 0;
 }
 
 .hero-strip .panel {
   position: relative;
   overflow: hidden;
-  border-radius: 0;
-}
-
-.hero-strip .panel-1 {
-  background:
-    repeating-linear-gradient(112deg, rgba(109, 184, 94, 0.1) 0 2px, transparent 2px 22px),
-    linear-gradient(
-      to top,
-      rgba(30, 44, 30, 0.86) 0%,
-      rgba(30, 44, 30, 0.2) 56%,
-      rgba(30, 44, 30, 0.4) 100%
-    ),
-    url('/assets/projetos/industrial/image1.webp') center / cover no-repeat;
   display: flex;
   align-items: flex-end;
   padding: 28px;
+  background:
+    repeating-linear-gradient(var(--angle), var(--hatch) 0 2px, transparent 2px var(--step)),
+    var(--scrim),
+    var(--img) center / cover no-repeat;
+}
+
+.hero-strip .panel-1 {
+  --angle: 112deg;
+  --hatch: rgba(109, 184, 94, 0.1);
+  --step: 22px;
+  --scrim: linear-gradient(
+    to top,
+    rgba(30, 44, 30, 0.86) 0%,
+    rgba(30, 44, 30, 0.2) 56%,
+    rgba(30, 44, 30, 0.4) 100%
+  );
+  --img: url('/assets/projetos/industrial/image1.webp');
 }
 
 .hero-strip .panel-2 {
-  background:
-    repeating-linear-gradient(58deg, rgba(109, 184, 94, 0.08) 0 2px, transparent 2px 30px),
-    linear-gradient(
-      to top,
-      rgba(26, 36, 25, 0.86) 0%,
-      rgba(26, 36, 25, 0.25) 60%,
-      rgba(26, 36, 25, 0.5) 100%
-    ),
-    url('/assets/projetos/projeto-fazendinha/projeto1.webp') center / cover no-repeat;
-  display: flex;
-  align-items: flex-end;
+  --angle: 58deg;
+  --hatch: rgba(109, 184, 94, 0.08);
+  --step: 30px;
+  --scrim: linear-gradient(
+    to top,
+    rgba(26, 36, 25, 0.86) 0%,
+    rgba(26, 36, 25, 0.25) 60%,
+    rgba(26, 36, 25, 0.5) 100%
+  );
+  --img: url('/assets/projetos/projeto-fazendinha/projeto1.webp');
   justify-content: space-between;
   padding: 32px;
 }
 
 .hero-strip .panel-3 {
-  background:
-    repeating-linear-gradient(-35deg, rgba(109, 184, 94, 0.14) 0 2px, transparent 2px 20px),
-    linear-gradient(
-      to bottom,
-      rgba(23, 73, 20, 0.84) 0%,
-      rgba(23, 73, 20, 0.2) 56%,
-      rgba(30, 44, 30, 0.46) 100%
-    ),
-    url('/assets/projetos/residencial/image1.webp') center / cover no-repeat;
-  display: flex;
+  --angle: -35deg;
+  --hatch: rgba(109, 184, 94, 0.14);
+  --step: 20px;
+  --scrim: linear-gradient(
+    to bottom,
+    rgba(30, 44, 30, 0.84) 0%,
+    rgba(30, 44, 30, 0.2) 56%,
+    rgba(30, 44, 30, 0.46) 100%
+  );
+  --img: url('/assets/projetos/residencial/image1.webp');
   align-items: flex-start;
-  padding: 28px;
 }
 
 .hero-strip .panel .lbl {
@@ -186,7 +176,7 @@
   font-size: 11px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: rgba(251, 250, 238, 0.6);
+  color: var(--cream-bright); /* opaco: AA sobre scrim mesmo com foto clara */
 }
 
 .hero-strip .panel .marker {
@@ -203,7 +193,29 @@
   font-size: clamp(32px, 3vw, 44px);
 }
 
-/* Badge girando — assinatura visual flutuante (Terroso 6.8, 40s linear) */
+/* Mobile: painel principal em largura total, os outros dois lado a lado */
+@media (max-width: 820px) {
+  .hero-strip {
+    grid-template-columns: 1fr 1fr;
+    height: auto;
+    min-height: 0;
+    max-height: none;
+  }
+
+  .hero-strip .panel-2 {
+    grid-column: 1 / -1;
+    order: -1;
+    min-height: 300px;
+  }
+
+  .hero-strip .panel-1,
+  .hero-strip .panel-3 {
+    min-height: 210px;
+    padding: 20px;
+  }
+}
+
+/* Badge girando — assinatura visual flutuante (Terroso 6.8) */
 .hero-badge {
   position: absolute;
   left: 50%;
@@ -216,11 +228,10 @@
   z-index: 4;
 }
 
-/* Rotation only when motion is welcome — and cheaper box-shadow over drop-shadow */
 @media (prefers-reduced-motion: no-preference) {
   .hero-badge {
     will-change: transform;
-    animation: rotate 60s linear infinite;
+    animation: rotate 40s linear infinite;
   }
 }
 
@@ -241,7 +252,7 @@
   }
 }
 
-/* Watermark do simbolo atras do hero — "assinatura d'agua" (Terroso 7.4) */
+/* Watermark do símbolo atrás do hero — "assinatura d'água" (Terroso 7.4) */
 .hero-watermark {
   position: absolute;
   left: -220px;
